@@ -1,0 +1,47 @@
+Typescript
+
+Crear una carpeta, abrir la terminal, escribir cd y dejar caer la carpeta al lado de cd
+
+Comando para crear un proyecto con Vite
+npm create vite
+npm install  (instala las dependencias)
+
+se crea una carpeta con el nombre del proyecto, la cual tengo que abrir con Visual Studio Code
+
+
+Tipado de datos:
+
+const name: string = 'texto';
+let variable: number = 123;
+const encontrado: boolean = true;
+let skills = ['Bash','Counter','Healing'];
+
+Si no pongo el tipo de dato Typescript lo infiere.
+
+si no coloco el tipo de dato despues del nombre de la variable y agrego datos de otro tipo en el arreglo el tipo inferido cambia.Ej:
+let skill = ['Bash','Counter','Healing', true, 123]; -> el tipo inferido es (string | number | boolean)[]
+
+si quiero controlar el tipo de dato pongo: 
+let skills: string[]  = ['Bash','Counter','Healing'];
+
+
+Interfaces, se usan para asignarle un tipo de dato a los atributos de un objeto, ya que no lo puedo definir dentro del objeto
+Ej: 
+
+  interface Character {
+  	name: string;
+  	hp: number;
+  	skills: string[];
+  	hometown?: string;      -> el signo de pregunta indica que es opcional (es como si estuviese undefined)
+  }
+
+  const strider: Character {
+  	name: 'Strider',
+  	hp: 100,
+  	skills: ['Bash','Counter']
+  };
+  
+
+
+
+
